@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidCafe</string>
+    <string name="android_contentdescription_string1">Donut Order Button.</string>
+    <string name="android_contentdescription_string2">Coffee Order Button.</string>
+    <string name="android_contentdescription_string3">Add Order Button.</string>
+    <string name="android_contentdescription_string4">Order History Button.</string>
 </resources>
