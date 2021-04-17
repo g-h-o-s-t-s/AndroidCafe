@@ -1,7 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" tools:context=".CoffeeActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffeeBackground"
+    tools:context=".CoffeeActivity">
+
+    <Spinner
+        android:id="@+id/sizeList"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/addIns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size" />
+
+    <Button
+        android:id="@+id/addCoffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="183dp"
+        android:text="@string/add_to_order_name_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtotalDisplay" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="189dp"
+        android:text="Size"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <TextView
+        android:id="@+id/addIns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Ins"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <RadioButton
+        android:id="@+id/creamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cream"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <RadioButton
+        android:id="@+id/syrupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Syrup"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <RadioButton
+        android:id="@+id/milkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Milk"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <RadioButton
+        android:id="@+id/caramelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caramel"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <RadioButton
+        android:id="@+id/whippedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whipped Cream"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="322dp" />
+
+    <TextView
+        android:id="@+id/subtotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sub-total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/subtotalDisplay"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="437dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
