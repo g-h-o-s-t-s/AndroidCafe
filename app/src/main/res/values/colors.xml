@@ -3,4 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="mainBackground">#DDBF6D</color>
+    <color name="donutBackground">#E8D39A</color>
+    <color name="coffeeBackground">#D9EC77</color>
+    <color name="addOrderBackground">#87E880</color>
+    <color name="reviewOrdersBackground">#DFB079</color>
+    <color name="buttonColor">#CDB37D</color>
 </resources>

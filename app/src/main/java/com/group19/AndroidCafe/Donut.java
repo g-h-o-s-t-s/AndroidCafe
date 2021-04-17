@@ -1,16 +1,53 @@
 package com.group19.AndroidCafe;
 
+import static com.group19.AndroidCafe.Consts.DONUT_PRICE;
+import static com.group19.AndroidCafe.Consts.df;
+
 /**
- * Donut superclass for three types of Donuts.
+ * Represents Donut-type MenuItem.
  @author Sagnik Mukherjee, Michael Choe
  */
-public abstract class Donut extends MenuItem
+public class Donut extends MenuItem
 {
+    //object fields
+    private int amount;
+    private Donut.Flavor flavor;
+    public enum Flavor {
+        BOSTON_KREME,
+        STRAWBERRY,
+        JELLY,
+        VANILLA_GLAZE,
+        CHOCOLATE,
+        OLD_FASHIONED,
+        PUMPKIN_SPICE,
+        CHOCOLATE_GLAZE,
+        POWDERED
+    }
+
     /**
      * Default constructor.
      */
     public Donut() {
         super();
+        amount = 0;
+        flavor = Flavor.BOSTON_KREME;
+    }
+
+    /**
+     * Setter for donut amount.
+     * @param a int value, number of donuts
+     */
+    public void setAmount(int a) {
+        amount = a;
+    }
+
+    /**
+     * Setter for donut flavor.
+     * @param f enum value, flavor of donut
+     */
+    public void setFlavor(Object f) {
+        if (f instanceof String)
+            flavor = Donut.Flavor.valueOf((String) f);
     }
 
     /**
@@ -32,26 +69,21 @@ public abstract class Donut extends MenuItem
     }
 
     /**
-     * Abstract method to be implemented by subclasses as needed.
-     * Sets amount of donuts for this object.
+     * Assigns the price for this Donut item.
      */
-    public abstract void setAmount(int amount);
+    @Override
+    public void itemPrice() {
+        setPrice(DONUT_PRICE * amount);
+    }
 
     /**
-     * Abstract method to be implemented by subclasses as needed.
-     * Sets donut flavor.
+     * Returns a String containing current Donut details.
+     * @return String value, Donut details
      */
-    public abstract void setFlavor(Object o);
-
-    /**
-     * Abstract method to be implemented by subclasses as needed.
-     * Calculates the price for a set of donuts.
-     */
-    public abstract void itemPrice();
-
-    /**
-     * Abstract method, toString for each Donut type.
-     * @return String value, Donut contents
-     */
-    public abstract String toString();
+    @Override
+    public String toString() {
+        return "Donut, " + flavor + " Flavor, " + amount +
+                " @ " + df.format(DONUT_PRICE)
+                + " each, " + df.format(getPrice()) + ".";
+    }
 }

@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">AndroidCafe</string>
+    <string name="main_name">Main Menu</string>
+    <string name="donut_name">Order Donuts</string>
+    <string name="coffee_name">Order Coffee</string>
+    <string name="add_name">Add To Order</string>
+    <string name="orders_name">Review Order History</string>
     <string name="android_contentdescription_string1">Donut Order Button.</string>
     <string name="android_contentdescription_string2">Coffee Order Button.</string>
     <string name="android_contentdescription_string3">Add Order Button.</string>
     <string name="android_contentdescription_string4">Order History Button.</string>
+    <string name="remove_name_button">Remove</string>
+    <string name="add_name_button">Add</string>
+    <string name="add_to_order_name_button">Add To Order</string>
+    <string name="quantity_autofill_hint">amount</string>
+    <string name="quantity_hint">amount</string>
 </resources>

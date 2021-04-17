@@ -18,16 +18,9 @@ public class Consts
     public static final double SALES_TAX = 0.06625;
     public static final double ZERO = 0.0;
 
-    //Pre-determining the resolutions for parent/child GUIs.
-    public static final int DEFAULT_WIDTH = 1280, DEFAULT_HEIGHT = 720;
-    public static final int REDUCED_WIDTH = 960, REDUCED_HEIGHT = 540;
-
 
     /* Donut() constants */
-    public static final double YEAST_PRICE = 1.39,
-            CAKE_PRICE = 1.59, HOLE_PRICE = 0.33;
-    public static final String TYPE1 = "CakeDonut", TYPE2 = "HoleDonut",
-            TYPE3  = "YeastDonut";
+    public static final double DONUT_PRICE = 1.39;
 
 
     /* Coffee() constants */

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/donutBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" tools:context=".DonutsActivity">
+    <ListView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:id="@+id/flavorOptions"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="22dp" android:layout_marginEnd="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button" android:layout_marginTop="8dp"/>
+    <Button
+            android:text="@string/add_name_button"
+            android:layout_width="150dp"
+            android:layout_height="100dp" android:id="@+id/button"
+            android:onClick="addDonut"
+            android:background="@color/buttonColor" android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/quantity" android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/flavorOptions"/>
+    <Button
+            android:text="@string/remove_name_button"
+            android:layout_width="150dp"
+            android:layout_height="100dp" android:id="@+id/button2"
+            android:onClick="removeDonut"
+            android:background="@color/buttonColor" android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/subTotal" android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/currentDonutsList"/>
+    <ListView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:id="@+id/currentDonutsList" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="22dp" android:layout_marginEnd="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
+            app:layout_constraintTop_toBottomOf="@+id/button2"/>
+    <EditText
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/quantity"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button" android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/flavorOptions"
+            app:layout_constraintBottom_toTopOf="@+id/subTotal"
+            android:hint="@string/quantity_hint"
+            android:autofillHints="@string/quantity_autofill_hint"/>
+    <TextView
+            android:layout_width="150dp"
+            android:layout_height="100dp" android:id="@+id/subTotal"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button2" android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/currentDonutsList"
+            app:layout_constraintTop_toBottomOf="@+id/quantity"/>
+    <Button
+            android:text="@string/add_to_order_name_button"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:id="@+id/button3"
+            android:onClick="addToOrder"
+            android:background="@color/buttonColor" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="22dp" android:layout_marginEnd="23dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/currentDonutsList"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
