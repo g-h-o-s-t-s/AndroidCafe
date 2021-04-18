@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.group19.AndroidCafe.Consts.df;
+import static com.group19.AndroidCafe.Consts.*;
 
 /**
  * DonutsActivity to add Donuts to static Order.
@@ -19,9 +19,10 @@ public class DonutsActivity extends AppCompatActivity
     //data fields
     Order tempOrder;
     Donut tempDonut;
+    private int selected = DEFAULT_INDEX;
 
     //Android Node element handles.
-    private ListView flavors;
+    private Spinner flavors;
     private ListView currentDonuts;
     private EditText quantityText;
     private TextView subtotalText;
@@ -37,8 +38,16 @@ public class DonutsActivity extends AppCompatActivity
         quantityText = findViewById(R.id.quantity);
         subtotalText = findViewById(R.id.subTotal);
 
+        //get position of clicked currentDonuts list selection for removal,
+        //otherwise remove topmost Donut object in list (selected == 0)
+        currentDonuts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+             public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
+                 selected = position;
+             }
+         });
+
         tempOrder = new Order();
-        quantityText.setEnabled(false);
         showFlavors(getCurrentFocus());
     }
 
@@ -47,25 +56,22 @@ public class DonutsActivity extends AppCompatActivity
      * @param view current View object
      */
     public void showFlavors(View view) {
-        List<Donut.Flavor> enumList = Arrays.asList(
-                Donut.Flavor.class.getEnumConstants());
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(this,
+                R.array.flavors_array, android.R.layout.simple_spinner_item);
 
-        ArrayAdapter<Donut.Flavor> arrayAdapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                enumList);
-
-        flavors.setAdapter(arrayAdapter);
+        adapter.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
+        flavors.setAdapter(adapter);
     }
 
     /**
-     * Quick helper to reset flavors and quantity, disable quantity.
+     * Quick helper to reset flavors and quantity.
      */
     private void resetSelections() {
-        //forces user to start over each time
+        //start over with the tempDonut object and quantity field
         tempDonut = null;
         quantityText.setText("");
-        quantityText.setEnabled(true);
     }
 
     /**
@@ -91,8 +97,7 @@ public class DonutsActivity extends AppCompatActivity
      */
     public void removeDonut(View view) {
         try {
-            if (currentDonuts.getSelectedItem() != null) {
-                int selected = currentDonuts.getSelectedItemPosition();
+            if (currentDonuts.getItemAtPosition(selected) != null) {
                 tempOrder.getItemList().remove(selected);
 
                 refreshTextFields();
@@ -106,6 +111,7 @@ public class DonutsActivity extends AppCompatActivity
      * Helper to create a new Donut object according to user input.
      */
     private void setDonut() {
+        tempDonut = new Donut();
         if (quantityText.getText() != null)
             tempDonut.setAmount(Integer.parseInt(String.valueOf(
                 quantityText.getText())));
@@ -117,6 +123,8 @@ public class DonutsActivity extends AppCompatActivity
      * Update the contents of currentDonuts and subtotalText.
      */
     private void refreshTextFields() {
+        //reset listView Position
+        selected = 0;
         String[] temp = tempOrder.toString().split("\n");
         temp = Arrays.copyOf(temp, temp.length - 1);
 
@@ -156,8 +164,7 @@ public class DonutsActivity extends AppCompatActivity
      * @param ex String literal containing exception details
      */
     public void throwToast(String ex) {
-        Toast.makeText(this.getApplicationContext(),
-                "Failed to launch sub-activity. Details as follows...\n" +
+        Toast.makeText(this.getApplicationContext(), ERROR +
                         ex, Toast.LENGTH_SHORT).show();
     }
 }

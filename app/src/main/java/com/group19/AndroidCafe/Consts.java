@@ -17,10 +17,13 @@ public class Consts
     //New Jersey Sales and Use Tax Rate = 6.625%
     public static final double SALES_TAX = 0.06625;
     public static final double ZERO = 0.0;
+    public static final int DEFAULT_INDEX = 0;
 
 
     /* Donut() constants */
     public static final double DONUT_PRICE = 1.39;
+    public static final String ERROR =
+            "Exception encountered... ";
 
 
     /* Coffee() constants */

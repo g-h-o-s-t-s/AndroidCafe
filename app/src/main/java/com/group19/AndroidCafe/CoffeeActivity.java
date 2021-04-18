@@ -154,7 +154,7 @@ public class CoffeeActivity extends AppCompatActivity
 //     */
 //    public void throwToast(String ex) {
 //        Toast.makeText(this.getApplicationContext(),
-//                "Failed to launch sub-activity. Details as follows...\n" +
+//                ERROR +
 //                        ex, Toast.LENGTH_SHORT).show();
 //    }
 //
