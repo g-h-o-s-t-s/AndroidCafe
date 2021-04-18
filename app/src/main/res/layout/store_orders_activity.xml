@@ -5,4 +5,45 @@
         android:background="@color/reviewOrdersBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent" tools:context=".StoreOrdersActivity">
+
+    <Button
+        android:id="@+id/cancelOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Order"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="638dp" />
+
+    <TextView
+        android:id="@+id/orderTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <Spinner
+        android:id="@+id/orderID"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <ListView
+        android:id="@+id/orderList"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="209dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
