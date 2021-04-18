@@ -1,17 +1,39 @@
 <resources>
+<!--  Activity Titles.  -->
     <string name="app_name">AndroidCafe</string>
-    <string name="main_name">Main Menu</string>
     <string name="donut_name">Order Donuts</string>
     <string name="coffee_name">Order Coffee</string>
     <string name="add_name">Add To Order</string>
     <string name="orders_name">Review Order History</string>
-    <string name="android_contentdescription_string1">Donut Order Button.</string>
-    <string name="android_contentdescription_string2">Coffee Order Button.</string>
-    <string name="android_contentdescription_string3">Add Order Button.</string>
-    <string name="android_contentdescription_string4">Order History Button.</string>
+<!--  Donut Activity.  -->
     <string name="remove_name_button">Remove</string>
     <string name="add_name_button">Add</string>
     <string name="add_to_order_name_button">Add To Order</string>
     <string name="quantity_autofill_hint">amount</string>
     <string name="quantity_hint">amount</string>
+<!--  Array of Donut Flavors.  -->
+    <string-array name="flavors_array">
+        <item>BOSTON_KREME</item>
+        <item>STRAWBERRY</item>
+        <item>JELLY</item>
+        <item>VANILLA_GLAZE</item>
+        <item>CHOCOLATE</item>
+        <item>OLD_FASHIONED</item>
+        <item>PUMPKIN_SPICE</item>
+        <item>CHOCOLATE_GLAZE</item>
+        <item>POWDERED</item>
+    </string-array>
+<!--  Accessibility Reader Hints for Main Activity.  -->
+    <string name="android_contentdescription_stringM1">Donut Order Button, at the top.</string>
+    <string name="android_contentdescription_stringM2">Coffee Order Button, second from top.</string>
+    <string name="android_contentdescription_stringM3">Add Order Button, second from bottom.</string>
+    <string name="android_contentdescription_stringM4">Order History Button, at the bottom.</string>
+<!--  Accessibility Reader Hints for Donut Activity.  -->
+    <string name="android_contentdescription_stringD1">Donut flavor options, top of screen.</string>
+    <string name="android_contentdescription_stringD2">Button, Add Donut to temp Order, second row, right.</string>
+    <string name="android_contentdescription_stringD3">Button, Remove Donut from temp Order, third row, right.</string>
+    <string name="android_contentdescription_stringD4">Text box, Subtotal of Donuts thus far, third row, left.</string>
+    <string name="android_contentdescription_stringD5">List of donuts in temp Order, fourth row.</string>
+    <string name="android_contentdescription_stringD6">Button, Finalize Donuts and add to static Order,
+        bottom of screen.</string>
 </resources>

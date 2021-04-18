@@ -5,8 +5,11 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="mainBackground">#DDBF6D</color>
     <color name="donutBackground">#E8D39A</color>
-    <color name="coffeeBackground">#D9EC77</color>
+    <color name="coffeeBackground">#DFB079</color>
     <color name="addOrderBackground">#87E880</color>
-    <color name="reviewOrdersBackground">#DFB079</color>
+    <color name="reviewOrdersBackground">#D9EC77</color>
     <color name="buttonColor">#CDB37D</color>
+    <color name="spinnerColor">#E7DABE</color>
+    <color name="listViewColor">#C8F1BC</color>
+    <color name="outlineColor">#164B6A</color>
 </resources>

@@ -5,15 +5,17 @@
         android:background="@color/donutBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent" tools:context=".DonutsActivity">
-    <ListView
+    <Spinner
             android:layout_width="350dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:id="@+id/flavorOptions"
+            android:background="@color/spinnerColor"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="22dp" android:layout_marginEnd="23dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/button" android:layout_marginTop="8dp"/>
+            app:layout_constraintBottom_toTopOf="@+id/button" android:layout_marginTop="8dp"
+            android:contentDescription="@string/android_contentdescription_stringD1"/>
     <Button
             android:text="@string/add_name_button"
             android:layout_width="150dp"
@@ -23,7 +25,8 @@
             app:layout_constraintStart_toEndOf="@+id/quantity" android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/flavorOptions"/>
+            app:layout_constraintTop_toBottomOf="@+id/flavorOptions"
+            android:contentDescription="@string/android_contentdescription_stringD2"/>
     <Button
             android:text="@string/remove_name_button"
             android:layout_width="150dp"
@@ -33,11 +36,15 @@
             app:layout_constraintStart_toEndOf="@+id/subTotal" android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button"
-            app:layout_constraintBottom_toTopOf="@+id/currentDonutsList"/>
+            app:layout_constraintBottom_toTopOf="@+id/currentDonutsList"
+            android:contentDescription="@string/android_contentdescription_stringD3"/>
     <ListView
             android:layout_width="350dp"
             android:layout_height="200dp"
-            android:id="@+id/currentDonutsList" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/currentDonutsList"
+            android:background="@color/listViewColor"
+            android:choiceMode="singleChoice" android:listSelector="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="22dp" android:layout_marginEnd="23dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/button3"
@@ -57,10 +64,12 @@
     <TextView
             android:layout_width="150dp"
             android:layout_height="100dp" android:id="@+id/subTotal"
+            android:background="@drawable/background"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="20dp"
             app:layout_constraintEnd_toStartOf="@+id/button2" android:layout_marginEnd="10dp"
             app:layout_constraintBottom_toTopOf="@+id/currentDonutsList"
-            app:layout_constraintTop_toBottomOf="@+id/quantity"/>
+            app:layout_constraintTop_toBottomOf="@+id/quantity"
+            android:contentDescription="@string/android_contentdescription_stringD4"/>
     <Button
             android:text="@string/add_to_order_name_button"
             android:layout_width="350dp"
