@@ -19,11 +19,11 @@
         <item name="android:background">@color/coffeeBackground</item>
     </style>
     <!--  Add Order Theme.  -->
-    <style name="addOrder" parent="AppTheme">
+    <style name="addOrderTheme" parent="AppTheme">
         <item name="android:background">@color/addOrderBackground</item>
     </style>
     <!--  Review Orders Theme.  -->
-    <style name="reviewOrders" parent="AppTheme">
+    <style name="reviewOrdersTheme" parent="AppTheme">
         <item name="android:background">@color/reviewOrdersBackground</item>
     </style>
     <!--  Node Text Sizes.  -->
@@ -45,8 +45,12 @@
         <item name="android:background">@drawable/textview_drawable</item>
         <item name="android:textSize">@dimen/textSize2</item>
     </style>
+    <style name="TextViewStrokeless" parent="AppTheme">
+        <item name="android:background">@drawable/textview_drawable_strokeless</item>
+        <item name="android:textSize">@dimen/textSize2</item>
+    </style>
     <style name="ListView" parent="AppTheme">
-        <item name="android:background">@color/textViewColor</item>
+        <item name="android:background">@color/listViewColor</item>
         <item name="android:textSize">@dimen/textSize2</item>
     </style>
 </resources>

@@ -13,15 +13,14 @@ Android Application, remaster of coffee-and-donuts.
 # [Image Resources](https://github.com/g-h-o-s-t-s/AndroidCafe/tree/main/app/src/main/res/drawable)
 # [Constant Values](https://github.com/g-h-o-s-t-s/AndroidCafe/tree/main/app/src/main/res/values)
 [Colors](https://github.com/g-h-o-s-t-s/AndroidCafe/blob/main/app/src/main/res/values/colors.xml)\
-[Dimensions](https://github.com/g-h-o-s-t-s/AndroidCafe/blob/main/app/src/main/res/values/dimensions.xml)\
 [Strings](https://github.com/g-h-o-s-t-s/AndroidCafe/blob/main/app/src/main/res/values/strings.xml)\
 [Styles](https://github.com/g-h-o-s-t-s/AndroidCafe/blob/main/app/src/main/res/values/styles.xml)
 
 # TO-DO
-✔ Main Menu Activity\
-✔ Ordering Donuts Activity\
-✔ Ordering Coffee Activity\
-❌ Placing Order Activity\
-❌ Reviewing Order History Activity\
-❌ Thorough Testing\
-❌ Zip All Necessary Files for Submission
+- [x] Main Menu Activity
+- [x] Ordering Donuts Activity
+- [ ] Ordering Coffee Activity
+- [ ] Placing Order Activity
+- [ ] Reviewing Order History Activity
+- [ ] Thorough Testing
+- [ ] Zip All Necessary Files for Submission
