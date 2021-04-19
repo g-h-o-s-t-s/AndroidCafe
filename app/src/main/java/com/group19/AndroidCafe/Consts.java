@@ -30,8 +30,8 @@ public class Consts
     public static final double BASE_PRICE = 1.99,
             ADD_IN_COST = 0.20, SIZE_COST = 0.50;
     public static final double DOUBLE = 2, TRIPLE = 3;
-    public static final String SHORT = "Short", TALL = "Tall",
-            GRANDE = "Grande", VENTI = "Venti";
+    public static final String SHORT = "SHORT", TALL = "TALL",
+            GRANDE = "GRANDE", VENTI = "VENTI";
 
 
     /* Order() constants */

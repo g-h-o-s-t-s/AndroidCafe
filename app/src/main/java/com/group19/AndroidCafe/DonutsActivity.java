@@ -4,10 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Arrays;
 import java.util.List;
-
 import static com.group19.AndroidCafe.Consts.*;
 
 /**
@@ -36,7 +34,7 @@ public class DonutsActivity extends AppCompatActivity
         flavors = findViewById(R.id.flavorOptions);
         currentDonuts = findViewById(R.id.currentDonutsList);
         quantityText = findViewById(R.id.quantity);
-        subtotalText = findViewById(R.id.subTotal);
+        subtotalText = findViewById(R.id.subTotalDonuts);
 
         //get position of clicked currentDonuts list selection for removal,
         //otherwise remove topmost Donut object in list (selected == 0)
