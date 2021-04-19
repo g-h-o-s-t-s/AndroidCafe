@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Font Sizes.  -->
+    <dimen name="textSize1">48dp</dimen>
+    <dimen name="textSize2">32dp</dimen>
+    <dimen name="textSize3">20dp</dimen>
+    <dimen name="textSize4">16dp</dimen>
+    <dimen name="textSize5">14dp</dimen>
+    <dimen name="strokeWidth">1dp</dimen>
+</resources>

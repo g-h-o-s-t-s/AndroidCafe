@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@color/mainBackground"
+        android:theme="@style/MainTheme"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -15,8 +15,8 @@
             android:contentDescription="@string/android_contentdescription_stringM1" android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="32dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="554dp"
-            android:scaleType="fitCenter" android:background="@color/mainBackground"
-            android:onClick="launchDonuts"/>
+            android:scaleType="fitCenter"
+            android:onClick="launchDonuts" android:background="@color/transparent"/>
     <ImageButton
             android:layout_width="144dp"
             android:layout_height="144dp" app:srcCompat="@drawable/coffee" android:id="@+id/coffeeOrder"
@@ -25,8 +25,8 @@
             android:contentDescription="@string/android_contentdescription_stringM2" android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="200dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="386dp"
-            android:background="@color/mainBackground" android:scaleType="fitCenter"
-            android:onClick="launchCoffee"/>
+            android:scaleType="fitCenter"
+            android:onClick="launchCoffee" android:background="@color/transparent"/>
     <ImageButton
             android:layout_width="144dp"
             android:layout_height="144dp" app:srcCompat="@drawable/addorder" android:id="@+id/addOrder"
@@ -35,8 +35,8 @@
             android:contentDescription="@string/android_contentdescription_stringM3" android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="368dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="218dp"
-            android:scaleType="fitCenter" android:background="@color/mainBackground"
-            android:onClick="launchAddOrder"/>
+            android:scaleType="fitCenter" android:theme="@style/ImageViewButton"
+            android:onClick="launchAddOrder" android:background="@color/transparent"/>
     <ImageButton
             android:layout_width="144dp"
             android:layout_height="144dp" app:srcCompat="@drawable/orderlist" android:id="@+id/storeOrders"
@@ -45,6 +45,6 @@
             android:contentDescription="@string/android_contentdescription_stringM4" android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="536dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="50dp"
-            android:background="@color/mainBackground" android:scaleType="fitCenter"
-            android:onClick="launchStoreOrder"/>
+            android:scaleType="fitCenter"
+            android:onClick="launchStoreOrder" android:background="@color/transparent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

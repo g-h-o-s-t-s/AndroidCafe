@@ -1,4 +1,6 @@
 <resources>
+<!--  Miscellaneous.  -->
+
 <!--  Activity Titles.  -->
     <string name="app_name">AndroidCafe</string>
     <string name="donut_name">Order Donuts</string>
@@ -23,6 +25,13 @@
         <item>CHOCOLATE_GLAZE</item>
         <item>POWDERED</item>
     </string-array>
+<!--  Array of Coffee sizes.  -->
+    <string-array name="sizes_array">
+        <item>SHORT</item>
+        <item>TALL</item>
+        <item>GRANDE</item>
+        <item>VENTI</item>
+    </string-array>
 <!--  Accessibility Reader Hints for Main Activity.  -->
     <string name="android_contentdescription_stringM1">Donut Order Button, at the top.</string>
     <string name="android_contentdescription_stringM2">Coffee Order Button, second from top.</string>
@@ -36,4 +45,13 @@
     <string name="android_contentdescription_stringD5">List of donuts in temp Order, fourth row.</string>
     <string name="android_contentdescription_stringD6">Button, Finalize Donuts and add to static Order,
         bottom of screen.</string>
+<!--  Accessibility Reader Hints for Coffee Activity.  -->
+    <string name="android_contentdescription_stringC1">Coffee size options, top of screen.</string>
+    <string name="add_ins">Add-Ins</string>
+    <string name="cream">Cream</string>
+    <string name="syrup">Syrup</string>
+    <string name="milk">Milk</string>
+    <string name="caramel">Caramel</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="subtotal">Sub-total</string>
 </resources>

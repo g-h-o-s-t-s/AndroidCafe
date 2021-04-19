@@ -1,10 +1,52 @@
 <resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textAlignment">center</item>
     </style>
-
+    <!--  Main Theme.  -->
+    <style name="MainTheme" parent="AppTheme">
+        <item name="android:background">@color/mainBackground</item>
+    </style>
+    <!--  Donut Theme.  -->
+    <style name="DonutTheme" parent="AppTheme">
+        <item name="android:background">@color/donutBackground</item>
+    </style>
+    <!--  Coffee Theme.  -->
+    <style name="CoffeeTheme" parent="AppTheme">
+        <item name="android:background">@color/coffeeBackground</item>
+    </style>
+    <!--  Add Order Theme.  -->
+    <style name="addOrder" parent="AppTheme">
+        <item name="android:background">@color/addOrderBackground</item>
+    </style>
+    <!--  Review Orders Theme.  -->
+    <style name="reviewOrders" parent="AppTheme">
+        <item name="android:background">@color/reviewOrdersBackground</item>
+    </style>
+    <!--  Node Text Sizes.  -->
+    <style name="ImageViewButton" parent="AppTheme">
+        <item name="android:background">@color/transparent</item>
+    </style>
+    <style name="Spinner" parent="AppTheme">
+        <item name="android:background">@color/spinnerColor</item>
+        <item name="android:textSize">@dimen/textSize2</item>
+    </style>
+    <style name="Button" parent="AppTheme">
+        <item name="android:textSize">@dimen/textSize3</item>
+    </style>
+    <style name="CheckBox" parent="AppTheme">
+        <item name="android:background">@color/checkBoxColor</item>
+        <item name="android:textSize">@dimen/textSize2</item>
+    </style>
+    <style name="TextView" parent="AppTheme">
+        <item name="android:background">@drawable/textview_drawable</item>
+        <item name="android:textSize">@dimen/textSize2</item>
+    </style>
+    <style name="ListView" parent="AppTheme">
+        <item name="android:background">@color/textViewColor</item>
+        <item name="android:textSize">@dimen/textSize2</item>
+    </style>
 </resources>

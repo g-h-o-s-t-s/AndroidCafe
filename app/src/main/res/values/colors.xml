@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Defaults.  -->
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <!--  Background Colors.  -->
     <color name="mainBackground">#DDBF6D</color>
     <color name="donutBackground">#E8D39A</color>
     <color name="coffeeBackground">#DFB079</color>
     <color name="addOrderBackground">#87E880</color>
     <color name="reviewOrdersBackground">#D9EC77</color>
+    <!--  Node Colors.  -->
     <color name="buttonColor">#CDB37D</color>
+    <color name="imageButtonColor">#CBBC9D</color>
     <color name="spinnerColor">#E7DABE</color>
+    <color name="checkBoxColor">#C1B59B</color>
     <color name="listViewColor">#C8F1BC</color>
+    <color name="textViewColor">#F2EBDD</color>
     <color name="outlineColor">#164B6A</color>
+    <color name="transparent">#00000000</color>
 </resources>
