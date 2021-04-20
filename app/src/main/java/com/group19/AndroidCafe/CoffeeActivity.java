@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import static com.group19.AndroidCafe.Consts.ERROR;
-import static com.group19.AndroidCafe.Consts.df;
+
+import static com.group19.AndroidCafe.Consts.*;
 
 /**
  * CoffeeActivity to add Coffee to static Order.
@@ -70,12 +70,15 @@ public class CoffeeActivity extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parentView,
                     View selectedItemView, int position, long id) {
                 updateSize();
+                //Spinner's selected item doesn't respond to android:textSize
+                //under Spinner theme in styles.xml, so we use this instead
+                ((TextView) parentView.getChildAt(FIRST_NODE)).
+                        setTextSize(SPINNER_TEXT_SIZE);
             }
 
+            //nothing to implement here
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //empty, no need to implement
-            }
+            public void onNothingSelected(AdapterView<?> parent) { }
         });
 
         cream.setOnCheckedChangeListener(new CompoundButton.

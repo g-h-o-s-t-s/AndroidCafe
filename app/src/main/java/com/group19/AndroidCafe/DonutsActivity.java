@@ -3,16 +3,13 @@ package com.group19.AndroidCafe;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
-import java.util.Arrays;
-import java.util.List;
 import static com.group19.AndroidCafe.Consts.*;
 
 /**
  * DonutsActivity to add Donuts to static Order.
  @author Sagnik Mukherjee, Michael Choe
  */
-public class DonutsActivity extends AppCompatActivity
+public class DonutsActivity extends PopulateList
 {
     //data fields
     Order tempOrder;
@@ -44,6 +41,22 @@ public class DonutsActivity extends AppCompatActivity
                  selected = position;
              }
          });
+
+        flavors.setOnItemSelectedListener(new AdapterView.
+            OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView,
+                    View selectedItemView, int position, long id) {
+                //Spinner's selected item doesn't respond to android:textSize
+                //under Spinner theme in styles.xml, so we use this instead
+                ((TextView) parentView.getChildAt(FIRST_NODE)).
+                        setTextSize(SPINNER_TEXT_SIZE);
+            }
+
+            //nothing to implement here
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
+        });
 
         tempOrder = new Order();
         showFlavors(getCurrentFocus());
@@ -124,15 +137,7 @@ public class DonutsActivity extends AppCompatActivity
         //reset listView Position
         selected = 0;
         String[] temp = tempOrder.toString().split("\n");
-        temp = Arrays.copyOf(temp, temp.length - 1);
-
-        //refresh and populate temporarily selected Donuts
-        List<String> list = Arrays.asList(temp);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                list);
-        currentDonuts.setAdapter(arrayAdapter);
+        populateListHelper(currentDonuts, temp);
 
         tempOrder.orderPrice();
         double subtotal = tempOrder.getSubtotal();

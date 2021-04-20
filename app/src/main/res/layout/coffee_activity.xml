@@ -20,7 +20,7 @@
             app:layout_constraintBottom_toTopOf="@+id/creamBox"/>
     <CheckBox
             android:id="@+id/creamBox"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="48dp"
             android:text="@string/cream"
             android:theme="@style/CheckBox" app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             app:layout_constraintBottom_toTopOf="@+id/milkBox"/>
     <CheckBox
             android:id="@+id/syrupBox"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="48dp"
             android:text="@string/syrup"
             android:theme="@style/CheckBox" android:layout_marginEnd="80dp"
@@ -40,7 +40,7 @@
             app:layout_constraintBottom_toTopOf="@+id/caramelBox"/>
     <CheckBox
             android:id="@+id/milkBox"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="48dp"
             android:text="@string/milk"
             android:theme="@style/CheckBox"
@@ -50,7 +50,7 @@
             app:layout_constraintBottom_toTopOf="@+id/whippedBox"/>
     <CheckBox
             android:id="@+id/caramelBox"
-            android:layout_width="200dp"
+            android:layout_width="160dp"
             android:layout_height="48dp"
             android:text="@string/caramel"
             android:theme="@style/CheckBox"

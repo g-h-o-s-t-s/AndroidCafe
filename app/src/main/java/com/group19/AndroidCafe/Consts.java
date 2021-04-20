@@ -32,6 +32,7 @@ public class Consts
     public static final double DOUBLE = 2, TRIPLE = 3;
     public static final String SHORT = "SHORT", TALL = "TALL",
             GRANDE = "GRANDE", VENTI = "VENTI";
+    public static int FIRST_NODE = 0, SPINNER_TEXT_SIZE = 32;
 
 
     /* Order() constants */
