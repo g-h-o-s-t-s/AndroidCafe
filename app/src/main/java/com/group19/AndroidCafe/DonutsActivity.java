@@ -14,7 +14,7 @@ public class DonutsActivity extends PopulateList
     //data fields
     Order tempOrder;
     Donut tempDonut;
-    private int selected = DEFAULT_INDEX;
+    private int selected = INT_ZERO;
 
     //Android Node element handles.
     private Spinner flavors;
@@ -49,7 +49,7 @@ public class DonutsActivity extends PopulateList
                     View selectedItemView, int position, long id) {
                 //Spinner's selected item doesn't respond to android:textSize
                 //under Spinner theme in styles.xml, so we use this instead
-                ((TextView) parentView.getChildAt(FIRST_NODE)).
+                ((TextView) parentView.getChildAt(INT_ZERO)).
                         setTextSize(SPINNER_TEXT_SIZE);
             }
 
@@ -96,7 +96,7 @@ public class DonutsActivity extends PopulateList
 
             resetSelections();
             refreshTextFields();
-        } catch (NumberFormatException | NullPointerException ex) {
+        } catch (Exception ex) {
             throwToast(ex.getMessage());
         }
     }
@@ -121,11 +121,16 @@ public class DonutsActivity extends PopulateList
     /**
      * Helper to create a new Donut object according to user input.
      */
-    private void setDonut() {
+    private void setDonut() throws Exception {
         tempDonut = new Donut();
-        if (quantityText.getText() != null)
-            tempDonut.setAmount(Integer.parseInt(String.valueOf(
-                quantityText.getText())));
+        if (quantityText.getText() != null) {
+            int textVal = Integer.parseInt(String.valueOf(
+                    quantityText.getText()));
+            if (textVal != INT_ZERO)
+                tempDonut.setAmount(textVal);
+            else
+                throw new Exception(ZERO_DONUTS);
+        }
         tempDonut.setFlavor(flavors.getSelectedItem());
         tempDonut.itemPrice();
     }
@@ -150,15 +155,16 @@ public class DonutsActivity extends PopulateList
      */
     public void addToOrder(View view) {
         try {
-            if (tempOrder != null) {
+            if (tempOrder != null && tempOrder.isNotEmpty()) {
                 for (MenuItem i : tempOrder.getItemList())
                     MainActivity.mainOrder.add(i);
                 //good to set null before closing out of sub-Activity
                 tempOrder = null;
-                this.finish();
             }
         } catch (Exception ex) {
             throwToast(ex.getMessage());
+        } finally {
+            this.finish();
         }
     }
 

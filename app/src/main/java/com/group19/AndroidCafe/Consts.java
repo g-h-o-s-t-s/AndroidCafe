@@ -17,13 +17,14 @@ public class Consts
     //New Jersey Sales and Use Tax Rate = 6.625%
     public static final double SALES_TAX = 0.06625;
     public static final double ZERO = 0.0;
-    public static final int DEFAULT_INDEX = 0;
+    public static final int INT_ZERO = 0;
 
 
     /* Donut() constants */
     public static final double DONUT_PRICE = 1.39;
     public static final String ERROR =
-            "Exception encountered... ";
+            "Exception encountered... ",
+    ZERO_DONUTS = "Quantity should be greater than zero.";
 
 
     /* Coffee() constants */
@@ -32,7 +33,7 @@ public class Consts
     public static final double DOUBLE = 2, TRIPLE = 3;
     public static final String SHORT = "SHORT", TALL = "TALL",
             GRANDE = "GRANDE", VENTI = "VENTI";
-    public static int FIRST_NODE = 0, SPINNER_TEXT_SIZE = 32;
+    public static int SPINNER_TEXT_SIZE = 32;
 
 
     /* Order() constants */

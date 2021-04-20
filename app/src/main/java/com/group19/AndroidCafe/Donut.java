@@ -1,7 +1,6 @@
 package com.group19.AndroidCafe;
 
-import static com.group19.AndroidCafe.Consts.DONUT_PRICE;
-import static com.group19.AndroidCafe.Consts.df;
+import static com.group19.AndroidCafe.Consts.*;
 
 /**
  * Represents Donut-type MenuItem.
@@ -29,7 +28,7 @@ public class Donut extends MenuItem
      */
     public Donut() {
         super();
-        amount = 0;
+        amount = INT_ZERO;
         flavor = Flavor.BOSTON_KREME;
     }
 
@@ -74,6 +73,14 @@ public class Donut extends MenuItem
     @Override
     public void itemPrice() {
         setPrice(DONUT_PRICE * amount);
+    }
+
+    /**
+     * Checks to see if Donut has no quantity.
+     * @return boolean value, no amount of Donuts in this object
+     */
+    public boolean isEmpty() {
+        return amount == INT_ZERO;
     }
 
     /**

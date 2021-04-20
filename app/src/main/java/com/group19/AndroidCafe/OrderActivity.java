@@ -15,7 +15,7 @@ import static com.group19.AndroidCafe.Consts.*;
 public class OrderActivity extends PopulateList
 {
     //data fields
-    private int selected = DEFAULT_INDEX;
+    private int selected = INT_ZERO;
 
     //Android Node element handles.
     private TextView subtotalText;
@@ -52,14 +52,15 @@ public class OrderActivity extends PopulateList
      */
     public void placeOrder(View view) {
         try {
-            if (MainActivity.mainOrder != null) {
+            if (MainActivity.mainOrder != null &&
+                    MainActivity.mainOrder.isNotEmpty()) {
                 MainActivity.mainStoreOrder.add(MainActivity.mainOrder);
                 MainActivity.mainOrder = new Order();
-
-                this.finish();
             }
         } catch (Exception ex) {
             throwToast(ex.getMessage());
+        } finally {
+            this.finish();
         }
     }
 

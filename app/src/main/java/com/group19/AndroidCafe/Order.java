@@ -114,6 +114,14 @@ public class Order implements Customizable
     }
 
     /**
+     * Checks to see if Order has no value, AKA no MenuItems.
+     * @return boolean value, Order has no items
+     */
+    public boolean isNotEmpty() {
+        return total != ZERO;
+    }
+
+    /**
      * Returns a String containing current Order details neatly.
      * @return String value, concatenates MenuItems' toString results
      */

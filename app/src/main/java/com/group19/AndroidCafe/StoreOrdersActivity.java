@@ -5,9 +5,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import static com.group19.AndroidCafe.Consts.DEFAULT_INDEX;
 import static com.group19.AndroidCafe.Consts.ERROR;
+import static com.group19.AndroidCafe.Consts.INT_ZERO;
 
 /**
  * StoreOrdersActivity to hold all currently existing Order objects.
@@ -16,7 +15,7 @@ import static com.group19.AndroidCafe.Consts.ERROR;
 public class StoreOrdersActivity extends PopulateList
 {
     //data fields
-    private int selected = DEFAULT_INDEX;
+    private int selected = INT_ZERO;
 
     //Android Node element handles.
     private ListView currentOrders;

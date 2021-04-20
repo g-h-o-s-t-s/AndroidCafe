@@ -72,7 +72,7 @@ public class CoffeeActivity extends AppCompatActivity
                 updateSize();
                 //Spinner's selected item doesn't respond to android:textSize
                 //under Spinner theme in styles.xml, so we use this instead
-                ((TextView) parentView.getChildAt(FIRST_NODE)).
+                ((TextView) parentView.getChildAt(INT_ZERO)).
                         setTextSize(SPINNER_TEXT_SIZE);
             }
 
@@ -180,10 +180,11 @@ public class CoffeeActivity extends AppCompatActivity
                 MainActivity.mainOrder.add(tempCoffee);
                 //good to set null before closing out of sub-Activity
                 tempCoffee = null;
-                this.finish();
             }
         } catch (Exception ex) {
             throwToast(ex.getMessage());
+        } finally {
+            this.finish();
         }
     }
 
