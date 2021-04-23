@@ -22,5 +22,5 @@ Android Application, remaster of coffee-and-donuts.
 - [x] Ordering Coffee Activity
 - [x] Placing Order Activity
 - [x] Reviewing Order History Activity
-- [ ] Thorough Testing
-- [ ] Zip All Necessary Files for Submission
+- [x] Thorough Testing
+- [x] Zip All Necessary Files for Submission

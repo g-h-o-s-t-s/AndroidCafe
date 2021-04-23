@@ -62,10 +62,10 @@ public class StoreOrdersActivity extends PopulateList
      * Helper to update the textArea/listView displays in real-time (ideally).
      */
     private void updateFields() {
-        selected = 0;
+        selected = INT_ZERO;
         String[] temp = MainActivity.mainStoreOrder.toString().
                 split("\n==================\n");
-        populateListHelper(currentOrders, temp);
+        populateListHelper2(currentOrders, temp);
     }
 
     /**

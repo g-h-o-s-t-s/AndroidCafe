@@ -28,4 +28,17 @@ public abstract class PopulateList extends AppCompatActivity
                 this, R.layout.list_view, list);
         lv.setAdapter(arrayAdapter);
     }
+
+    /**
+     * Update contents of ListView object (StoreOrdersActivity version).
+     * @param lv ListView object reference to be updated
+     * @param temp String[] toString contents to be added to ListView
+     */
+    protected void populateListHelper2(ListView lv, String[] temp) {
+        //refresh and populate ListView
+        List<String> list = Arrays.asList(temp);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
+                this, R.layout.list_view, list);
+        lv.setAdapter(arrayAdapter);
+    }
 }

@@ -68,7 +68,7 @@
     <ListView
             android:id="@+id/currentItemsDisplay"
             android:layout_width="347dp"
-            android:layout_height="346dp"
+            android:layout_height="200dp"
             android:theme="@style/ListView"
             android:listSelector="@color/colorAccent"
             android:choiceMode="singleChoice"

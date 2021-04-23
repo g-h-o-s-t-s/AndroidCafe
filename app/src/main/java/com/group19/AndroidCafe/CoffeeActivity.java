@@ -164,7 +164,7 @@ public class CoffeeActivity extends AppCompatActivity
      */
     private void updateSubtotal() {
         try {
-        subtotalText.setText(df.format(tempCoffee.getPrice()));
+            subtotalText.setText(df.format(tempCoffee.getPrice()));
         } catch (Exception ex) {
             throwToast(ex.getMessage());
         }
